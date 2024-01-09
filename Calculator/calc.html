@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="c:/users/edna sarabia/desktop/python_tutorial/calc.png" type="image/png">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        #calculator {
+            width: 262px;
+            height: 267px;
+            margin: 50px auto;
+            background-color: rgba(9, 10, 10, 0.849);
+            border: 1px solid white;
+            height: 245px;
+            text-align: center;
+        }
+
+        #calculator input {
+            width: 80%;
+            height: 30px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: blue;
+            color: yellow;
+            text-align: center;
+        }
+
+        #calculator button {
+            width: 60px;
+            height: 50px;
+            margin: 5px;
+            font-size: 16px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #calculator button.equal {
+            background-color: red;
+            color: yellow;
+        }
+
+        #calculator button.clear {
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Scantlin's Basic Calculator</h2>
+
+    <div id="calculator">
+        <input id="lineEdit" type="text" disabled>
+        <button onclick="appendText('1')">1</button>
+        <button onclick="appendText('2')">2</button>
+        <button onclick="appendText('3')">3</button>
+        <button onclick="appendText('+')">+</button>
+        <button onclick="appendText('-')">-</button>
+        <button class="equal" onclick="calculateResult()">=</button>
+        <button class="clear" onclick="clearLineEdit()">Clear</button>
+    </div>
+
+    <script>
+        function appendText(text) {
+            document.getElementById('lineEdit').value += text;
+        }
+
+        function calculateResult() {
+            try {
+                var result = eval(document.getElementById('lineEdit').value);
+                document.getElementById('lineEdit').value = result;
+            } catch (e) {
+                document.getElementById('lineEdit').value = 'Error';
+            }
+        }
+
+        function clearLineEdit() {
+            document.getElementById('lineEdit').value = '';
+            console.log("deleted")
+        }
+    </script>
+
+</body>
+</html>
