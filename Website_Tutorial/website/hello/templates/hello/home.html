@@ -1,0 +1,14 @@
+{% extends "hello/base.html" %}
+{% block content %}
+    {% for names in name %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ names.matalino }}</a>
+            <small class="text-muted">{{ names.maaasahan }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ names.pogi }}</a></h2>
+        </div>
+    </article>
+    {% endfor %}
+{% endblock content %}

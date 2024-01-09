@@ -13,9 +13,13 @@ from PyQt5.QtWidgets import QDialog, QMessageBox
 
 
 class Ui_Form(object):
+    def exit(self):
+        app.exit()
+        
     def clicked(self):
         y_text = "Hello World"
         y = QMessageBox()
+        y.setStyleSheet("color: blue;")
         y.setIcon(QMessageBox.Information)
         y.setText(y_text)
         y.exec_()
@@ -28,13 +32,25 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Try")
         Form.resize(400, 300)
+        Form.setFixedSize(400, 300)
+        Form.setWindowIcon(QtGui.QIcon('c:/users/edna sarabia/desktop/Python_Tutorial/icon.png'))
+        Form.setStyleSheet("background-color: black;")
         self.Button = QtWidgets.QPushButton(Form)
-        self.Button.setGeometry(QtCore.QRect(150, 50, 81, 41))
+        
+        self.Button.setGeometry(QtCore.QRect(150, 75, 81, 41))
         self.Button.setObjectName("Button")
+        self.Button.setStyleSheet("background-color: white; color: blue;")
         self.Button.clicked.connect(self.clicked)
+        
         self.Button2 = QtWidgets.QPushButton(Form)
-        self.Button2.setGeometry(QtCore.QRect(150,100,81,41))
+        self.Button2.setGeometry(QtCore.QRect(150,125,81,41))
+        self.Button2.setStyleSheet("background-color: white;")
         self.Button2.clicked.connect(self.push)
+        
+        self.Button3 = QtWidgets.QPushButton(Form)
+        self.Button3.setGeometry(QtCore.QRect(150, 25, 81, 41))
+        self.Button3.setStyleSheet("background-color: white;")
+        self.Button3.clicked.connect(quit)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -44,6 +60,7 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Try", "Try"))
         self.Button.setText(_translate("Try", "Click me"))
         self.Button2.setText(_translate("Try", "Push me"))
+        self.Button3.setText(_translate("Try", "Exit"))
 
 
 if __name__ == "__main__":

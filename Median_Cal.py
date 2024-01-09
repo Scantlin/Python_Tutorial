@@ -1,7 +1,8 @@
 class median:
+        
     def mid(self, mo):
         self.mo = mo
-        count = len(mo)
+        count = len(self.mo)
         if (count % 2) != 0:
             for i,c in enumerate(self.mo):
                 if i == (((len(self.mo) -1)/2)):
