@@ -10,7 +10,6 @@ class Ui_Form(object):
         
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(20, 80, 54, 54))
-        self.pushButton.setObjectName("pushButton")
         self.pushButton.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #D4D4D2; ")
         
         self.pushButton_2 = QtWidgets.QPushButton(Form)
