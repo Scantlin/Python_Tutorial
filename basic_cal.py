@@ -33,7 +33,7 @@ class Ui_Form(object):
         self.pushButton_5.setStyleSheet("background-color: red; color: white;")
         
         self.pushButton_6 = QtWidgets.QPushButton(Form)
-        self.pushButton_6.setGeometry(QtCore.QRect(60, 200, 61, 51))
+        self.pushButton_6.setGeometry(QtCore.QRect(140, 150, 61, 51))
         self.pushButton_6.setObjectName("pushButton_6")
         self.pushButton_6.setStyleSheet("background-color: red; color: yellow;")
         
@@ -41,6 +41,9 @@ class Ui_Form(object):
         self.pushButton_7.setGeometry(QtCore.QRect(140, 200, 61, 51))
         self.pushButton_7.setObjectName("pushButton_7")
         self.pushButton_7.setStyleSheet("background-color: red; color: black;")
+        
+        self.pushButton_8 = QtWidgets.QPushButton(Form)
+        self.pushButton_8.setGeometry(QtCore.QRect(80, 500, 61, 51))
         
         self.lineEdit = QtWidgets.QLineEdit(Form)
         self.lineEdit.setGeometry(QtCore.QRect(50, 20, 161, 41))
