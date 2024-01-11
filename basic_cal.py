@@ -11,33 +11,33 @@ class Ui_Form(object):
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(20, 80, 54, 54))
         self.pushButton.setObjectName("pushButton")
-        self.pushButton.setStyleSheet("border-radius : 27; border : 2px solid; background-color: lightgray; ")
+        self.pushButton.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #D4D4D2; ")
         
         self.pushButton_2 = QtWidgets.QPushButton(Form)
         self.pushButton_2.setGeometry(QtCore.QRect(80, 80, 54, 54))
         self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_2.setStyleSheet("border-radius : 27; border : 2px solid; background-color: lightgray;")
+        self.pushButton_2.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #D4D4D2;")
         
         self.pushButton_3 = QtWidgets.QPushButton(Form)
         self.pushButton_3.setGeometry(QtCore.QRect(140, 80, 54, 54))
         self.pushButton_3.setObjectName("pushButton_3")
-        self.pushButton_3.setStyleSheet("border-radius : 27; border : 2px solid; background-color: lightgray; ")
+        self.pushButton_3.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #D4D4D2;")
         
         self.pushButton_4 = QtWidgets.QPushButton(Form)
         self.pushButton_4.setGeometry(QtCore.QRect(200, 80, 54, 54))
         self.pushButton_4.setObjectName("pushButton_4")
         self.pushButton_4.setStyleSheet("background-color: red; color: white;")
-        self.pushButton_4.setStyleSheet("border-radius : 27; border : 2px solid; background-color: darkorange; ")
+        self.pushButton_4.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #FF9500; ")
         
         self.pushButton_5 = QtWidgets.QPushButton(Form)
         self.pushButton_5.setGeometry(QtCore.QRect(200, 145, 54, 54))
         self.pushButton_5.setObjectName("pushButton_5")
-        self.pushButton_5.setStyleSheet("border-radius : 27; border : 2px solid; background-color: darkorange; ")
+        self.pushButton_5.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #FF9500; ")
         
         self.pushButton_6 = QtWidgets.QPushButton(Form)
         self.pushButton_6.setGeometry(QtCore.QRect(200, 340, 54, 54))
         self.pushButton_6.setObjectName("pushButton_6")
-        self.pushButton_6.setStyleSheet("border-radius : 27; border : 2px solid; background-color: darkorange; ")
+        self.pushButton_6.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #FF9500; ")
         
         self.pushButton_7 = QtWidgets.QPushButton(Form)
         self.pushButton_7.setGeometry(QtCore.QRect(200, 500, 54, 54))
@@ -46,62 +46,62 @@ class Ui_Form(object):
         
         self.pushButton_8 = QtWidgets.QPushButton(Form)
         self.pushButton_8.setGeometry(QtCore.QRect(20, 145, 54, 54))
-        self.pushButton_8.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_8.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_9 = QtWidgets.QPushButton(Form)
         self.pushButton_9.setGeometry(QtCore.QRect(80, 145, 54, 54))
-        self.pushButton_9.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_9.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_10 = QtWidgets.QPushButton(Form)
         self.pushButton_10.setGeometry(QtCore.QRect(140, 145, 54, 54))
-        self.pushButton_10.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_10.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_11 = QtWidgets.QPushButton(Form)
         self.pushButton_11.setGeometry(QtCore.QRect(20, 210, 54, 54))
-        self.pushButton_11.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_11.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_12 = QtWidgets.QPushButton(Form)
         self.pushButton_12.setGeometry(QtCore.QRect(80, 210, 54, 54))
-        self.pushButton_12.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_12.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_13 = QtWidgets.QPushButton(Form)
         self.pushButton_13.setGeometry(QtCore.QRect(140, 210, 54, 54))
-        self.pushButton_13.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_13.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_14 = QtWidgets.QPushButton(Form)
         self.pushButton_14.setGeometry(QtCore.QRect(200, 210, 54, 54))
-        self.pushButton_14.setStyleSheet("border-radius : 27; border : 2px solid; background-color: darkorange; ")
+        self.pushButton_14.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #FF9500; ")
         
         self.pushButton_15 = QtWidgets.QPushButton(Form)
         self.pushButton_15.setGeometry(QtCore.QRect(20, 275, 54, 54))
-        self.pushButton_15.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_15.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_16 = QtWidgets.QPushButton(Form)
         self.pushButton_16.setGeometry(QtCore.QRect(80, 275, 54, 54))
-        self.pushButton_16.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_16.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_17 = QtWidgets.QPushButton(Form)
         self.pushButton_17.setGeometry(QtCore.QRect(140, 275, 54, 54))
-        self.pushButton_17.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_17.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_18 = QtWidgets.QPushButton(Form)
         self.pushButton_18.setGeometry(QtCore.QRect(200, 275, 54, 54))
-        self.pushButton_18.setStyleSheet("border-radius : 27; border : 2px solid; background-color: darkorange; ")
+        self.pushButton_18.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #FF9500; ")
         
         self.pushButton_19 = QtWidgets.QPushButton(Form)
         self.pushButton_19.setGeometry(QtCore.QRect(20, 340, 114, 54))
-        self.pushButton_19.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray; ")
+        self.pushButton_19.setStyleSheet("border-radius : 27; border : 2px solid; background-color:  #505050; ")
         
         self.pushButton_20 = QtWidgets.QPushButton(Form)
         self.pushButton_20.setGeometry(QtCore.QRect(140, 340, 54, 54))
-        self.pushButton_20.setStyleSheet("border-radius : 27; border : 2px solid; background-color: gray;")
+        self.pushButton_20.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #505050;")
         
         self.lineEdit = QtWidgets.QLineEdit(Form)
         self.lineEdit.setGeometry(QtCore.QRect(0, 0, 268, 75))
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter) #Align text in the center
         self.lineEdit.setStyleSheet("background-color: black; color: white; border: none;")
-        self.lineEdit.setEnabled(False) #disable line edit from asking input from a user
+        self.lineEdit.setEnabled(True) #disable line edit from asking input from a user
         self.lineEdit.setFont(QFont('Arial', 15))
         
         self.retranslateUi(Form)
