@@ -4,7 +4,7 @@ from PyQt5.QtGui import *
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(268, 400)
+        Form.resize(270, 405)
         Form.setWindowIcon(QtGui.QIcon('c:/users/edna sarabia/desktop/python_tutorial/calc.png'))
         Form.setStyleSheet("background-color: black;")
         
