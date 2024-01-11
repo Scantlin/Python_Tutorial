@@ -36,12 +36,10 @@ class Ui_Form(object):
         
         self.pushButton_6 = QtWidgets.QPushButton(Form)
         self.pushButton_6.setGeometry(QtCore.QRect(200, 340, 54, 54))
-        self.pushButton_6.setObjectName("pushButton_6")
         self.pushButton_6.setStyleSheet("border-radius : 27; border : 2px solid; background-color: #FF9500; ")
         
         self.pushButton_7 = QtWidgets.QPushButton(Form)
         self.pushButton_7.setGeometry(QtCore.QRect(200, 500, 54, 54))
-        self.pushButton_7.setObjectName("pushButton_7")
         self.pushButton_7.setStyleSheet("background-color: red; color: black;")
         
         self.pushButton_8 = QtWidgets.QPushButton(Form)
