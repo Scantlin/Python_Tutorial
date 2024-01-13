@@ -7,7 +7,7 @@
     <title>Calculator</title>
     <style>
         body {
-            background-color: black;
+            background-color: aqua;
             color: white;
             font-family: Arial, sans-serif;
             display: flex;
@@ -19,9 +19,10 @@
         }
 
         .calculator {
+            background-color: black;
             border: 2px solid #777;
-            border-radius: 10px;
-            padding: 10px;
+            border-radius: 45px;
+            padding: 15px;
         }
 
         input {
@@ -75,7 +76,7 @@
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;"><i>Calculator na gawa ni Cayson Pogi HAHAHAHAHA Python code converted into HTML</i></h1>
+    <h1 style="text-align: center; color:black;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><i>Calculator na gawa ni Cayson Pogi HAHAHAHAHA Python code converted into HTML</i></h1>
     <div class="calculator">
 
     <input id="result" readonly>
@@ -109,7 +110,7 @@
     </div>
 
     <div class="row">
-        <button onclick="appendText('0')" id="zero" style='color: #D4D4D2;'>0</button>
+        <button onclick="appendText('0')" id="zero" style='color: #D4D4D2; text-align: left;'>&nbsp;&nbsp;&nbsp;0</button>
         <button onclick="appendText('.')" style='color: #D4D4D2;'>.</button>
         <button onclick="calculateResult()" id="equals">=</button>
     </div>

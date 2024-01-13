@@ -6,7 +6,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.setFixedSize(270, 405)
-        Form.setWindowIcon(QtGui.QIcon('c:/users/edna sarabia/desktop/python_tutorial/calc.png'))
+        Form.setWindowIcon(QtGui.QIcon('c:/users/edna sarabia/desktop/python_tutorial/Calculator/calc.png'))
         Form.setStyleSheet("background-color: black;")
         
         self.pushButton = QtWidgets.QPushButton(Form)
