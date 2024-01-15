@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>37614-highlowBackgroundImage-1584073286.png</file>
+    <file>333237728_219566600521895_5681794888765001149_n (1).jpg</file>
+    <file>ag.png</file>
+    <file>icon.ico</file>
+  </qresource>
+</RCC>
