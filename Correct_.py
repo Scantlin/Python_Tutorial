@@ -14,6 +14,8 @@ def display_message():
     turtle.clear()
     turtle.write("Correct! Got it right", align="center", font=("Arial", 16, "normal"))
 
+import turtle
+
 # Set up the turtle window
 turtle.title("Turtle Correct Message with Simple Design")
 turtle.bgcolor("lightblue")
