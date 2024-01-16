@@ -103,16 +103,17 @@ class Ui_Form(object):
 
         if user_guess is not None:
             # Generate a random number
-            random_number = random.randrange(1, 6)
+            random_number = random.randrange(1, 11)
 
             # Compare the user's guess with the random number
             if user_guess == random_number:
                 self.lineEdit_2.setText(str(random_number))
                 self.label_3.setGeometry(QtCore.QRect(157, 250, 280, 61))
                 self.label_3.setText("Congratulations! You guessed correctly!")
-            elif user_guess > 5:
+            elif user_guess > 10 or user_guess < 1:
                 self.label_3.setGeometry(QtCore.QRect(160, 250, 280, 61))
-                self.label_3.setText("The number to guess is within 1 - 5")
+                self.label_3.setText("The number to guess is within 1 - 10")
+                self.lineEdit_2.clear()
             else:
                 self.lineEdit_2.setText(str(random_number))
                 self.label_3.setGeometry(QtCore.QRect(180, 250, 280, 61))
@@ -121,7 +122,7 @@ class Ui_Form(object):
             # Display a message if the user input is not a valid number
             warning_box = QMessageBox()
             warning_box.setWindowTitle("Error Input")
-            warning_box.setText("""Please enter a number in ranges 1-5 \nYour input is invalid! Things to remember \n\n• The letter should not used as an guess\n• Your answer if exceeded in 5 then automatic wrong""")
+            warning_box.setText("""Please enter a number in ranges 1-5 \nYour input is invalid! Things to remember \n\n• The letter should not used as an guess\n• Your answer if exceeded in 10 then automatic wrong""")
             warning_box.setWindowFlags(QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowSystemMenuHint | QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.SplashScreen)
             warning_box.setIcon(QMessageBox.Warning)
             warning_box.exec_()
