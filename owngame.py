@@ -8,7 +8,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.setFixedSize(518, 351)
-        Form.setWindowIcon(QtGui.QIcon(":/newPrefix/333237728_219566600521895_5681794888765001149_n (1).jpg"))
+        Form.setWindowIcon(QtGui.QIcon(":/newPrefix/icon.ico"))
         Form.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
         
         self.menubar = QtWidgets.QMenuBar(Form)
@@ -78,6 +78,9 @@ class Ui_Form(object):
         self.clear_shortcut = QtWidgets.QShortcut(QtGui.QKeySequence("Ctrl+B"), Form)
         self.clear_shortcut.activated.connect(self.clearLineEdit)
         
+        self.enter_shortcut = QtWidgets.QShortcut(QtGui.QKeySequence("Enter"), Form)
+        self.enter_shortcut.activated.connect(self.check_guess)
+        
         self.label.raise_()
         self.label_2.raise_()
         self.lineEdit.raise_()
@@ -103,10 +106,10 @@ class Ui_Form(object):
         user_guess = int(self.lineEdit.text()) if self.lineEdit.text().isdigit() else None
 
         if user_guess is not None:
-            # Generate a random number
+        # Generate a random number
             random_number = random.randrange(1, 11)
 
-            # Compare the user's guess with the random number
+        # Compare the user's guess with the random number
             if user_guess == random_number:
                 self.lineEdit_2.setText(str(random_number))
                 self.label_3.setGeometry(QtCore.QRect(157, 250, 280, 61))
@@ -118,12 +121,12 @@ class Ui_Form(object):
             else:
                 self.lineEdit_2.setText(str(random_number))
                 self.label_3.setGeometry(QtCore.QRect(180, 250, 280, 61))
-                self.label_3.setText("Oops! Wrong guess. Try again!")
+                self.label_3.setText("Oops! Wrong guess. Try again!")    
         else:
             # Display a message if the user input is not a valid number
             warning_box = QMessageBox()
             warning_box.setWindowTitle("Error Input")
-            warning_box.setText("""Please enter a number in ranges 1-5 \nYour input is invalid! Things to remember \n\n• The letter should not used as an guess\n• Your answer if exceeded in 10 then automatic wrong""")
+            warning_box.setText("""Please enter a number in ranges 1-10 \nYour input is invalid! Things to remember \n\n• The letter should not be used\n• Your answer if exceeded in 10 then automatic wrong""")
             warning_box.setWindowFlags(QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowSystemMenuHint | QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.SplashScreen)
             warning_box.setIcon(QMessageBox.Warning)
             warning_box.exec_()
@@ -147,7 +150,6 @@ class Ui_Form(object):
         
         help_box.setText(help_text)
         help_box.exec_()
-
 
 
 if __name__ == "__main__":
