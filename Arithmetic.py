@@ -1,6 +1,6 @@
-go = True
+run = True
 
-while go:
+while run:
     def arith(x, y):
         cd = x[1] - x[0]
         for i in range(y):
