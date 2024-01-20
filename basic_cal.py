@@ -110,7 +110,7 @@ class Ui_Form(object):
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter) #Align text in the center
         self.lineEdit.setStyleSheet("background-color: black; color: white; border: none")
         self.lineEdit.setEnabled(False) #disable line edit from asking input from a user
-        self.lineEdit.setFont(QFont('Arial', 25))
+        self.lineEdit.setFont(QFont('Ariel', 25))
         
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)

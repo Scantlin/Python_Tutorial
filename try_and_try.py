@@ -1,4 +1,2 @@
-x = int(input("Enter the multiple: "))
-y = x * 10
-for i in range(x,y,x):
-    print(i)
+for i in range(1, 10):
+    print(f"{i} * 5 = {i * 5}")
