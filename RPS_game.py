@@ -66,12 +66,11 @@ class Ui_Game(object):
         QtCore.QMetaObject.connectSlotsByName(Game)
 
     def check(self, user_choice, clicked_button):
-        # Reset border for all buttons
         for button in [self.pushButton, self.pushButton_4, self.pushButton_2]:
-            button.setStyleSheet(button.styleSheet().replace("border: 2px solid blue;", ""))
-            
-         # Highlight the clicked button without removing the image
-        clicked_button.setStyleSheet(clicked_button.styleSheet() + "border: 2px solid blue;")
+            button.setStyleSheet.replace("border: 2px solid white;", "")
+
+        # Highlight the clicked button
+        clicked_button.setStyleSheet("border: 2px solid white;")
 
         computer_choice = random.choice(["rock", "paper", "scissors"])
 
