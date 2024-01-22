@@ -1,6 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
-from PyQt5.QtWidgets import QStatusBar
 import random
 
 
@@ -11,10 +10,6 @@ class Ui_Game(object):
         icon = QtGui.QIcon(":/newPrefix/rock.png")
         Game.setWindowIcon(icon)
         Game.setStyleSheet("background-color: rgb(0, 0, 0);")
-        
-        status_bar = QtWidgets.QStatusBar(Game)
-        status_bar.setStyleSheet("background-color: rgb(0, 0, 0); color: white;")
-        Game.setStatusBar(status_bar)
 
         self.pushButton = QtWidgets.QPushButton(Game)
         self.pushButton.setGeometry(QtCore.QRect(20, 110, 121, 121))
