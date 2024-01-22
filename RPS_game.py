@@ -69,8 +69,8 @@ class Ui_Game(object):
         # Reset border for all buttons
         for button in [self.pushButton, self.pushButton_4, self.pushButton_2]:
             button.setStyleSheet(button.styleSheet().replace("border: 2px solid blue;", ""))
-
-        # Highlight the clicked button without removing the image
+            
+         # Highlight the clicked button without removing the image
         clicked_button.setStyleSheet(clicked_button.styleSheet() + "border: 2px solid blue;")
 
         computer_choice = random.choice(["rock", "paper", "scissors"])
