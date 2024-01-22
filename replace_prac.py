@@ -1,9 +1,9 @@
-number = [1, 3, 4, 5]
-for i in range(len(number)):
-    number[i] = 5
+x = 0
+_1 = input("What is the 5th planet? ")
+_2 = int(input("What is 5 x 5? "))
+if _1 == "jupiter":
+    x = x + 1
+if _2 == 25:
+    x = x + 1
     
-sum = 0
-for x in number:
-    sum = x + sum
- 
-print(f"The total is {sum}")
+print(x)
