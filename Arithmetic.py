@@ -65,5 +65,3 @@ while go:
             go = True
         elif ck == 'n':
             go = False
-        else: 
-         

@@ -67,10 +67,10 @@ class Ui_Game(object):
 
     def check(self, user_choice, clicked_button):
         for button in [self.pushButton, self.pushButton_4, self.pushButton_2]:
-            button.setStyleSheet.replace("border: 2px solid white;", "")
+            button.setStyleSheet(button.styleSheet().replace("border: 2px solid white;", " "))
 
         # Highlight the clicked button
-        clicked_button.setStyleSheet("border: 2px solid white;")
+        clicked_button.setStyleSheet(clicked_button.styleSheet() + "border: 2px solid white;")
 
         computer_choice = random.choice(["rock", "paper", "scissors"])
 
