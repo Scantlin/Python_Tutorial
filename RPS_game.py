@@ -9,7 +9,6 @@ class Ui_Game(object):
         Game.setFixedSize(420, 580)
         icon = QtGui.QIcon(":/newPrefix/rock.png")
         Game.setWindowIcon(icon)
-        Game.setStyleSheet("background-color: rgb(0, 0, 0);")
 
         self.pushButton = QtWidgets.QPushButton(Game)
         self.pushButton.setGeometry(QtCore.QRect(20, 110, 121, 121))
@@ -33,11 +32,12 @@ class Ui_Game(object):
         self.pushButton_2.clicked.connect(lambda: self.check("rock", self.pushButton_2))
 
         self.label = QtWidgets.QLabel(Game)
-        self.label.setGeometry(QtCore.QRect(40, 10, 360, 68))
+        self.label.setGeometry(QtCore.QRect(40, 0, 360, 68))
         self.label.setStyleSheet("background-color: rgba(0, 0, 0, 0);\n"
-                                 "font: 30pt \"Niagara Solid\"; \n"
+                                 "font: 40pt \"Niagara Solid\"; \n"
                                  "color: rgb(85, 255, 127);")
         self.label.setObjectName("label")
+        self.label.setAlignment(QtCore.Qt.AlignCenter)
 
         self.lineEdit_2 = QtWidgets.QLineEdit(Game)
         self.lineEdit_2.setGeometry(QtCore.QRect(160, 290, 121, 121))
@@ -62,8 +62,12 @@ class Ui_Game(object):
         
         self.label_4 = QtWidgets.QLabel(Game)
         self.label_4.setGeometry(QtCore.QRect(117, 480, 200, 100))
-        self.label_4.setStyleSheet("background-color: rgba(0, 0, 0, 0); color: aqua; border: 2px solid brown; font-size: 18px")
+        self.label_4.setStyleSheet("background-color: rgba(0, 0, 0, 0); color: green; border: 2px dotted brown; font-size: 18px")
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        
+        self.label_5 = QtWidgets.QLabel(Game)
+        self.label_5.setGeometry(QtCore.QRect(0, 0, 420, 580))
+        self.label_5.setStyleSheet("border-image: url(:/newPrefix/Bg.png)")
         
         self.score_human = 0
         self.score_computer = 0
@@ -114,19 +118,35 @@ class Ui_Game(object):
         if self.score_computer == 5 or self.score_human == 5:
             Box = QMessageBox()
             Box.setWindowTitle("Results")
+            Box.setStyleSheet("background-color: black; color: aqua")
+
             if self.score_human == 5:
-                Box.setText("You Won in this Match")
-            elif self.score_computer == 5: 
-                Box.setText("You Lost in this Match")
+                Box.setText("Congratulations! You Won in this Match")
+                Box.setIcon(QMessageBox.Information)  # Add an information icon for winning
+            elif self.score_computer == 5:
+                Box.setText("Oops! You Lost in this Match")
+                Box.setIcon(QMessageBox.Critical)  # Add a critical icon for losing
+
+            # Add more customization to the QMessageBox
+            Box.setInformativeText(f"Final Score:\nHuman: {self.score_human}\nComputer: {self.score_computer}")
+            Box.setStandardButtons(QMessageBox.Ok)
+            Box.setDefaultButton(QMessageBox.Ok)
+
+            # Reset scores and update label
             self.score_human = 0
             self.score_computer = 0
             self.label_4.setText("Score!\nHuman Vs Computer")
-            Box.exec_()
 
+        # Execute the QMessageBox
+            result = Box.exec_()
+
+            if result == QMessageBox.Ok:
+                print("User clicked OK button.")
+            
     def retranslateUi(self, Game):
         _translate = QtCore.QCoreApplication.translate
         Game.setWindowTitle(_translate("Game", "Rock Paper and Scissors"))
-        self.label.setText(_translate("Game", "<html><head/><body><p align=\"center\"><span style=\" font-size:36pt; font-style:italic;\">Rock Paper and Scissors</span></p></body></html>"))
+        self.label.setText(_translate("Game", "<html><head/><body><p align=\"center\"><span style=\" font-size:40pt;\">Rock Paper and Scissors</span></p></body></html>"))
         self.label_2.setText(_translate("Game", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; color:#55ffff;\">COMPUTER</span></p></body></html>"))
         self.label_3.setText(_translate("Game", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; color:#00ffff;\">HUMAN</span></p></body></html>"))
         self.label_4.setText(_translate("Game", "Score!\nHuman Vs Computer"))

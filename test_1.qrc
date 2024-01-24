@@ -3,5 +3,6 @@
     <file>rock.png</file>
     <file>paper.png</file>
     <file>scissors.png</file>
+    <file>Bg.png</file>
   </qresource>
 </RCC>
