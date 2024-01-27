@@ -3,7 +3,7 @@ def draw_design():
     turtle.pensize(2)
     turtle.color("blue")
 
-    # Draw a square
+    # Draw a square 
     for _ in range(4):
         turtle.forward(100)
         turtle.left(90)
