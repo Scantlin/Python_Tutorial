@@ -4,5 +4,9 @@
     <file>paper.png</file>
     <file>scissors.png</file>
     <file>Bg.png</file>
+    <file>SNB.png</file>
+    <file>RNB.png</file>
+    <file>PNB.png</file>
+    <file>FBG.jpg</file>
   </qresource>
 </RCC>

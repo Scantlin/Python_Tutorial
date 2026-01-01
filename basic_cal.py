@@ -1,13 +1,14 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import *
+import math
 from PyQt5.QtWidgets import QMessageBox
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.setFixedSize(270, 405)
-        Form.setWindowIcon(QtGui.QIcon('c:/users/edna sarabia/desktop/python_tutorial/Calculator/calc.png'))
-        Form.setStyleSheet("background-color: black;")
+        Form.setWindowIcon(QtGui.QIcon('c:/users/edna sarabia/desktop/python_tutorial/calc.png'))
+        Form.setStyleSheet("background-color: black")
         
         self.pushButton = QtWidgets.QPushButton(Form)
         self.pushButton.setGeometry(QtCore.QRect(20, 80, 54, 54))
@@ -105,19 +106,19 @@ class Ui_Form(object):
         self.pushButton_20.setFont(QFont('Ariel', 17))
         
         self.lineEdit = QtWidgets.QLineEdit(Form)
-        self.lineEdit.setGeometry(QtCore.QRect(20, 0, 230, 75))
+        self.lineEdit.setGeometry(QtCore.QRect(0, 0, 270, 75))
         self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit.setAlignment(QtCore.Qt.AlignCenter) #Align text in the center
+        self.lineEdit.setAlignment(QtCore.Qt.AlignRight) #Align text in the center
         self.lineEdit.setStyleSheet("background-color: black; color: white; border: none")
         self.lineEdit.setEnabled(False) #disable line edit from asking input from a user
-        self.lineEdit.setFont(QFont('Ariel', 25))
+        self.lineEdit.setFont(QFont('Ariel', 20))
         
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         # Connect button clicks to functions
         self.pushButton.clicked.connect(self.clear_line_edit)
-        self.pushButton_2.clicked.connect(self.js_func)
+        self.pushButton_2.clicked.connect(self.Square_root)
         self.pushButton_3.clicked.connect(self.percentage)
         self.pushButton_4.clicked.connect(lambda: self.append_text("/"))
         self.pushButton_5.clicked.connect(lambda: self.append_text("*"))
@@ -172,22 +173,19 @@ class Ui_Form(object):
         except Exception as e:
             self.lineEdit.setText("Error")
             
-    def js_func(self):
-        message = "This calculator is developed by John Scantlin Cayson, inspired from Iphone Calculator"
-        box = QMessageBox()
-        box.setWindowTitle("JS info")
-        box.setIcon(QMessageBox.Information)
-        box.setText(message)
-        box.exec_()
-            
     def clear_line_edit(self):
         self.lineEdit.clear()
         print("deleted")
         
     def percentage(self):
-        m = float(self.lineEdit.text())/100
+        m = int(self.lineEdit.text())/100
         self.lineEdit.setText(str(m))
         
+    def Square_root(self):
+        p = int(self.lineEdit.text())
+        er = math.sqrt(p)
+        if isinstance(er, float): #to check if the number is float or even
+            self.lineEdit.setText(str(er))
         
 
 if __name__ == "__main__":

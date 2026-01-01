@@ -12,21 +12,21 @@ class Ui_Game(object):
 
         self.pushButton = QtWidgets.QPushButton(Game)
         self.pushButton.setGeometry(QtCore.QRect(20, 110, 121, 121))
-        self.pushButton.setStyleSheet("image: url(:/newPrefix/scissors.png);")
+        self.pushButton.setStyleSheet("image: url(:/newPrefix/SNB.png); border: none")
         self.pushButton.setText("")
         self.pushButton.setObjectName("pushButton")
         self.pushButton.clicked.connect(lambda: self.check("scissors", self.pushButton))
 
         self.pushButton_4 = QtWidgets.QPushButton(Game)
         self.pushButton_4.setGeometry(QtCore.QRect(160, 110, 121, 121))
-        self.pushButton_4.setStyleSheet("image: url(:/newPrefix/paper.png);")
+        self.pushButton_4.setStyleSheet("image: url(:/newPrefix/PNB.png); border: none")
         self.pushButton_4.setText("")
         self.pushButton_4.setObjectName("pushButton_4")
         self.pushButton_4.clicked.connect(lambda: self.check("paper", self.pushButton_4))
 
         self.pushButton_2 = QtWidgets.QPushButton(Game)
         self.pushButton_2.setGeometry(QtCore.QRect(290, 110, 121, 121))
-        self.pushButton_2.setStyleSheet("image: url(:/newPrefix/rock.png);")
+        self.pushButton_2.setStyleSheet("image: url(:/newPrefix/RNB.png); border: none")
         self.pushButton_2.setText("")
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_2.clicked.connect(lambda: self.check("rock", self.pushButton_2))
@@ -41,7 +41,7 @@ class Ui_Game(object):
 
         self.lineEdit_2 = QtWidgets.QLineEdit(Game)
         self.lineEdit_2.setGeometry(QtCore.QRect(160, 290, 121, 121))
-        self.lineEdit_2.setStyleSheet("border: none;")
+        self.lineEdit_2.setStyleSheet("background-color: rgba(0, 0, 0, 0); border: none")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.lineEdit_2.setEnabled(False)
 
@@ -56,40 +56,51 @@ class Ui_Game(object):
         self.label_3.setObjectName("label_3")
 
         self.lineEdit = QtWidgets.QLineEdit(Game)
-        self.lineEdit.setGeometry(QtCore.QRect(72, 440, 291, 31))
+        self.lineEdit.setGeometry(QtCore.QRect(117, 440, 200, 31))
+        self.lineEdit.setStyleSheet("border: 2px solid blue ;background-color: rgba(0, 0, 0, 0)")
         self.lineEdit.setObjectName("lineEdit")
         self.lineEdit.setEnabled(False)
         
         self.label_4 = QtWidgets.QLabel(Game)
         self.label_4.setGeometry(QtCore.QRect(117, 480, 200, 100))
-        self.label_4.setStyleSheet("background-color: rgba(0, 0, 0, 0); color: green; border: 2px dotted brown; font-size: 18px")
+        self.label_4.setStyleSheet("background-color: rgba(0, 0, 0, 0); color: aqua; border: 2px dotted brown; font-size: 18px")
         self.label_4.setAlignment(QtCore.Qt.AlignCenter)
         
         self.label_5 = QtWidgets.QLabel(Game)
         self.label_5.setGeometry(QtCore.QRect(0, 0, 420, 580))
-        self.label_5.setStyleSheet("border-image: url(:/newPrefix/Bg.png)")
+        self.label_5.setStyleSheet("border-image: url(:/newPrefix/FBG.jpg)")
         
         self.score_human = 0
         self.score_computer = 0
+        
+        self.label_4.raise_()
+        self.pushButton.raise_()
+        self.pushButton_2.raise_()
+        self.pushButton_4.raise_()
+        self.label.raise_()
+        self.label_2.raise_()
+        self.label_3.raise_()
+        self.lineEdit.raise_()
+        self.lineEdit_2.raise_()
 
         self.retranslateUi(Game)
         QtCore.QMetaObject.connectSlotsByName(Game)
 
     def check(self, user_choice, clicked_button):
         for button in [self.pushButton, self.pushButton_4, self.pushButton_2]:
-            button.setStyleSheet(button.styleSheet().replace("border: 2px solid rgb(85, 255, 127);", " "))
+            button.setStyleSheet(button.styleSheet().replace("border: 2px solid green;", "border: none"))
 
-        # Highlight the clicked button
-        clicked_button.setStyleSheet(clicked_button.styleSheet() + "border: 2px solid rgb(85, 255, 127);")
+    # Add border to the clicked button
+        clicked_button.setStyleSheet(clicked_button.styleSheet().replace("border: none","border: 2px solid green;"))
 
         computer_choice = random.choice(["rock", "paper", "scissors"])
 
         if computer_choice == "scissors":
-            self.lineEdit_2.setStyleSheet("border-image: url(:/newPrefix/scissors.png);")
+            self.lineEdit_2.setStyleSheet("border-image: url(:/newPrefix/SNB.png);")
         elif computer_choice == "rock":
-            self.lineEdit_2.setStyleSheet("border-image: url(:/newPrefix/rock.png);")
+            self.lineEdit_2.setStyleSheet("border-image: url(:/newPrefix/RNB.png);")
         elif computer_choice == "paper":
-            self.lineEdit_2.setStyleSheet("border-image: url(:/newPrefix/paper.png);")
+            self.lineEdit_2.setStyleSheet("border-image: url(:/newPrefix/PNB.png);")
 
         if user_choice == computer_choice:
             result = "It's a tie!"
@@ -106,17 +117,18 @@ class Ui_Game(object):
         
         self.lineEdit.setText(f"{result}")
         if result == "You win!":
-            self.lineEdit.setStyleSheet("color: gold; font-size: 16pt")
+            self.lineEdit.setStyleSheet("color: gold; font-size: 16pt; background-color: rgba(0, 0, 0, 0); border: 2px solid blue")
         elif result == "It's a tie!":
-            self.lineEdit.setStyleSheet("color: green; font-size: 16pt")
+            self.lineEdit.setStyleSheet("color: violet; font-size: 16pt; background-color: rgba(0, 0, 0, 0); border: 2px solid blue")
         else:
-            self.lineEdit.setStyleSheet("color: red; font-size: 16pt")
+            self.lineEdit.setStyleSheet("color: red; font-size: 16pt; background-color: rgba(0, 0, 0, 0); border: 2px solid blue")
         self.lineEdit.setAlignment(QtCore.Qt.AlignCenter)
         
         self.label_4.setText(f"Score!\nHuman: {self.score_human} Computer: {self.score_computer}")
         
         if self.score_computer == 5 or self.score_human == 5:
             Box = QMessageBox()
+            Box.setWindowIcon(QtGui.QIcon(":/newPrefix/scissors.png"))
             Box.setWindowTitle("Results")
             Box.setStyleSheet("background-color: black; color: aqua")
 
@@ -136,6 +148,8 @@ class Ui_Game(object):
             self.score_human = 0
             self.score_computer = 0
             self.label_4.setText("Score!\nHuman Vs Computer")
+            self.lineEdit_2.setStyleSheet("background-color: rgba(0, 0, 0, 0); border: none")
+            clicked_button.setStyleSheet(clicked_button.styleSheet().replace("border: 2px solid green", "border: none"))
 
         # Execute the QMessageBox
             result = Box.exec_()

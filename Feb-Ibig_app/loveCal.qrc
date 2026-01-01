@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="design">
+    <file>background.jpg</file>
+    <file>heart-3293531_1920.png</file>
+    <file>Icon.png</file>
+  </qresource>
+</RCC>

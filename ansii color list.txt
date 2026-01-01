@@ -1,0 +1,36 @@
+Ansii Color list
+
+- **Regular Colors**:
+  - Black: `\033[30m`
+  - Red: `\033[31m` 
+  - Green: `\033[32m`
+  - Yellow: `\033[33m`
+  - Blue: `\033[34m`
+  - Magenta: `\033[35m`
+  - Cyan: `\033[36m`
+  - White: `\033[37m`
+
+- **Bright (Bold) Colors**:
+  - Bright Black: `\033[90m`
+  - Bright Red: `\033[91m`
+  - Bright Green: `\033[92m`
+  - Bright Yellow: `\033[93m`
+  - Bright Blue: `\033[94m`
+  - Bright Magenta: `\033[95m`
+  - Bright Cyan: `\033[96m`
+  - Bright White: `\033[97m`
+
+- **Background Colors**:
+  - Black Background: `\033[40m`
+  - Red Background: `\033[41m`
+  - Green Background: `\033[42m`
+  - Yellow Background: `\033[43m`
+  - Blue Background: `\033[44m`
+  - Magenta Background: `\033[45m`
+  - Cyan Background: `\033[46m`
+  - White Background: `\033[47m`
+
+- **Reset Color**:
+  - Reset: `\033[0m`
+
+You can use these escape codes to change both the text color and background color in your Python console output. For example, `\033[41m` will change the background color to red, and `\033[0m` will reset both the text color and background color to the default.

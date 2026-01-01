@@ -1,29 +1,23 @@
-print("Grade compute tools")
-x = int(input("Enter how many number we add: "))
+print("Grade Calculator")
+x = int(input("Enter how many grades you will input: "))
 summation = []
 
-print("Enter the numbers: ")
-
+print("Enter grades")
 for i in range(x):
-    m = int((input()))
-    summation.insert(i, m)
+    y = int(input())
+    summation.insert(i, y)
     
-print(summation)
-def sum():
-    sum = 0
-    for number in summation:
-        sum = sum + number
-    return sum
+sum = 0
+for number in summation:
+    sum = sum + number
+    
+print(f"The grade is {sum/x}")
 
-grade = sum()/len(summation)
-print(grade)
-
-if (grade >= 98):
-    print("With highest honors")
-elif (grade >= 95): 
+if sum/x >= 98:
+    print("With highest Honor")
+elif sum/x >= 95:
     print("With high honor")
-elif(grade >= 90):
-    print("With honor")
+elif sum/x >= 90:
+    print("With Honor")
 else:
-    print("Invalid")
-
+    print("Still Congratulations")

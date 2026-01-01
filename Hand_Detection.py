@@ -1,7 +1,7 @@
 import cv2
 from cvzone import HandTrackingModule
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 detector = HandTrackingModule.HandDetector()
 
 while True: 

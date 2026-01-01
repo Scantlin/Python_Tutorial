@@ -6,7 +6,6 @@ print("List of command\n" + "1. Sqaure root\n" + "2. Solve for roots")
 x = int(input("Please your choice: "))
 
 if x == 1:
-    print("Subtraction")
     m = int(input("Enter the number: "))
     re = math.sqrt(m)
     print(re)

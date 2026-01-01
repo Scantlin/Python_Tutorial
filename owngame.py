@@ -9,7 +9,6 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.setFixedSize(518, 351)
         Form.setWindowIcon(QtGui.QIcon(":/newPrefix/icon.ico"))
-        Form.setStyleSheet("background-color: rgba(0, 0, 0, 0);")
         
         self.menubar = QtWidgets.QMenuBar(Form)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 518, 21))
