@@ -2,6 +2,7 @@ studentone = {
     "name": "none",
     "age": 0,
     "favorite color": "none"
+    
 }
 m = 1
 while m < len(studentone):
